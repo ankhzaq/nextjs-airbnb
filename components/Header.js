@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { MagnifyingGlassCircleIcon } from "@heroicons/react/24/solid";
+import { Bars3Icon, GlobeAltIcon, MagnifyingGlassCircleIcon, UserCircleIcon } from '@heroicons/react/24/solid';
 
 const srcImage = "https://links.papareact.com/qd3";
 
@@ -27,7 +27,14 @@ function Header() {
         />
       </div>
 
-      <h1>I am the header</h1>
+      <div className="flex items-center space-x-4 justify-end text-gray-500">
+        <p className="hidden md:inline cursor-pointer">Become a host</p>
+        <GlobeAltIcon className="h-6" />
+        <div className="flex items-center space-x-2 border-2 p-2 rounded-full">
+          <Bars3Icon className="h-6" />
+          <UserCircleIcon className="h-6" />
+        </div>
+      </div>
     </header>
   );
 }
