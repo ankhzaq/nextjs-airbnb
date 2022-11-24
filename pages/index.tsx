@@ -18,7 +18,7 @@ export default function Home(props: any) {
         <section className="pt-6">
           <h2 className="text-4xl font-semibold pb-5">Explore Nearby</h2>
           {exploreData && exploreData.map((item: any) => (
-            <h1>{item.location}</h1>
+            <SmallCard />
           ))}
         </section>
       </main>
