@@ -1,6 +1,7 @@
 import Banner from '../components/Banner';
 import Head from 'next/head';
 import Header from '../components/Header';
+import SmallCard from '../components/SmallCard';
 
 export default function Home(props: any) {
   const { exploreData } = (props || {})
@@ -26,12 +27,15 @@ export default function Home(props: any) {
     </div>
   )
 }
-
+/*
 export async function getStaticProps() {
+  console.log("prop1")
   const exploreData = await fetch("https://links.papareact.com/pyp").then((res) => res.json());
+  console.log("prop2")
   return {
     props: {
       exploreData
     }
   }
 }
+*/

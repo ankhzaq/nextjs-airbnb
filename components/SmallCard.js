@@ -1,6 +1,19 @@
+import Image from 'next/image';
+
 function SmallCard({ img, location, distance }) {
   return (
-    <div>small card</div>
+    <div className="flex items-center m-2 mt-5 space-x-4 rounded-xl cursor-pointer hover:bg-gray-100 hover:scale-105">
+      {/* Left */}
+      <div className="relative h-16 w-16">
+        <Image src={img} loader={() => img} layout="fill" className="rounded-lg" />
+      </div>
+
+      {/* Right */}
+      <div>
+        <h2>{location}</h2>
+        <h2>{distance}</h2>
+      </div>
+    </div>
   );
 }
 
