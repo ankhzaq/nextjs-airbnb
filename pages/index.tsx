@@ -13,14 +13,14 @@ export default function Home(props: any) {
       </Head>
       <Header />
       <Banner />
-      {/* Header */}
-      {/* Banner */}
       <main className="max-w-7xl mx-auto px-8 sm:px-16">
         <section className="pt-6">
           <h2 className="text-4xl font-semibold pb-5">Explore Nearby</h2>
-          {exploreData && exploreData.map((item: any) => (
-            <SmallCard />
-          ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2">
+            {exploreData && exploreData.map(({ img, location, distance }: any) => (
+              <SmallCard img={img} location={location} distance={distance} />
+            ))}
+          </div>
         </section>
       </main>
       <h1>Lets build Airbnb</h1>
