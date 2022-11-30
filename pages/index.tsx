@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import SmallCard from '../components/SmallCard';
 
 export default function Home(props: any) {
-  const { exploreData } = (props || {})
+  const { cardsData, exploreData } = (props || {})
   return (
     <div className="">
       <Head>
@@ -24,22 +24,21 @@ export default function Home(props: any) {
         </section>
 
         <section>
-          <h2>Live Anywhere</h2>
+          <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
         </section>
       </main>
       <h1>Lets build Airbnb</h1>
     </div>
   )
 }
-/*
+
 export async function getStaticProps() {
-  console.log("prop1")
   const exploreData = await fetch("https://links.papareact.com/pyp").then((res) => res.json());
-  console.log("prop2")
+  const cardsData = await fetch("https://links.papareact.com/zp1").then((res) => res.json());
   return {
     props: {
+      cardsData,
       exploreData
     }
   }
 }
-*/
