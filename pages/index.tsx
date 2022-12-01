@@ -2,6 +2,7 @@ import Banner from '../components/Banner';
 import Head from 'next/head';
 import Header from '../components/Header';
 import SmallCard from '../components/SmallCard';
+import MediumCard from '../components/MediumCard';
 
 export default function Home(props: any) {
   const { cardsData, exploreData } = (props || {})
@@ -25,6 +26,9 @@ export default function Home(props: any) {
 
         <section>
           <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
+          {cardsData && cardsData.map(() => (
+            <MediumCard  />
+          ))}
         </section>
       </main>
       <h1>Lets build Airbnb</h1>
