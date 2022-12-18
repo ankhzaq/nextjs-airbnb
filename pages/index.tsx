@@ -4,6 +4,8 @@ import Header from '../components/Header';
 import SmallCard from '../components/SmallCard';
 import MediumCard from '../components/MediumCard';
 
+const mockupExploreData = [{"img":"","location":"London","distance":"45-minute drive"},{"img":"","location":"Manchester","distance":"4.5-hour drive"},{"img":"","location":"Liverpool","distance":"4.5-hour drive"},{"img":"","location":"York","distance":"4-hour drive"},{"img":"","location":"Cardiff","distance":"45-minute drive"},{"img":"","location":"Birkenhead","distance":"4.5-hour drive"},{"img":"","location":"Newquay","distance":"6-hour drive"},{"img":"","location":"Hove","distance":"2-hour drive"}];
+const mockupCardsData = [{"img":"","title":"Outdoor getaways"},{"img":"","title":"Unique stays"},{"img":"","title":"Entire homes"},{"img":"","title":"Pet allowed"}];
 export default function Home(props: any) {
   const { cardsData, exploreData } = (props || {})
   return (
@@ -37,8 +39,10 @@ export default function Home(props: any) {
 }
 
 export async function getStaticProps() {
-  const exploreData = await fetch("https://links.papareact.com/pyp").then((res) => res.json());
-  const cardsData = await fetch("https://links.papareact.com/zp1").then((res) => res.json());
+  // const exploreData = await fetch("https://links.papareact.com/pyp").then((res) => res.json());
+  const exploreData = mockupExploreData;
+  // const cardsData = await fetch("https://links.papareact.com/zp1").then((res) => res.json());
+  const cardsData = mockupCardsData;
   return {
     props: {
       cardsData,
