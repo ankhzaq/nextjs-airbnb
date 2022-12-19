@@ -28,7 +28,7 @@ export default function Home(props: any) {
 
         <section>
           <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
-          {cardsData && cardsData.map(({ img, title }) => (
+          {cardsData?.map(({ img, title }) => (
             <MediumCard key={img} img={img} title={title} />
           ))}
         </section>
