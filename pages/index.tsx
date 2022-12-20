@@ -28,9 +28,11 @@ export default function Home(props: any) {
 
         <section>
           <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
-          {cardsData?.map(({ img, title }) => (
-            <MediumCard key={img} img={img} title={title} />
-          ))}
+          <div className="flex space-x-3 overflow-scroll">
+            {cardsData?.map(({ img, title }) => (
+              <MediumCard key={img} img={img} title={title} />
+            ))}
+          </div>
         </section>
       </main>
       <h1>Lets build Airbnb</h1>
