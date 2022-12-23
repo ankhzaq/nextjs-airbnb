@@ -1,4 +1,5 @@
 import Banner from '../components/Banner';
+import Footer from '../components/Footer';
 import Head from 'next/head';
 import Header from '../components/Header';
 import SmallCard from '../components/SmallCard';
@@ -44,7 +45,7 @@ export default function Home(props: any) {
         />
 
       </main>
-      <h1>Lets build Airbnb</h1>
+      <Footer />
     </div>
   )
 }
